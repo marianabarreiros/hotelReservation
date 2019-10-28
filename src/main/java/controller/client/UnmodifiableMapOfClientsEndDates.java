@@ -10,7 +10,7 @@ class UnmodifiableMapOfClientsEndDates {
     private final Map<String, Set<LocalDate>> mapClientsAndDates = new TreeMap<>();
 
     public Map<String, Set<LocalDate>> createMap(List<String> listOfFileLines) {
-        ValidDates validDates = new ValidDates();
+        ValidDates validDates = ValidDates.getInstance();
         String nameClient;
         String[] dates;
         int endIndex;

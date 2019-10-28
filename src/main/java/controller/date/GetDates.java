@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class GetDates {
-    private final ValidDates validDates = new ValidDates();
+    private final ValidDates validDates = ValidDates.getInstance();
 
     public Collection<LocalDate> returnDates(String fileLine) {
         return validDates.returnsListOfValidatedDates(convertingStringToList(fileLine));

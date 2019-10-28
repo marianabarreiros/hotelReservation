@@ -15,12 +15,20 @@ import java.util.stream.Collectors;
 import static javax.sql.rowset.spi.SyncFactory.getLogger;
 
 public class ValidDates {
-    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMMuuuu");
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMMuuuu");
+    private  static ValidDates datesValidationInstance;
     private Set<LocalDate> validatedDates;
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    private final AtomicBoolean isValid = new AtomicBoolean(Boolean.TRUE);
+    private AtomicBoolean isValid = new AtomicBoolean(Boolean.TRUE);;
 
-    public ValidDates() {
+    private ValidDates() {
+    }
+
+    public static ValidDates getInstance() {
+        if (datesValidationInstance == null) {
+            datesValidationInstance = new ValidDates();
+        }
+        return datesValidationInstance;
     }
 
     public synchronized Set<LocalDate> returnsListOfValidatedDates(List<String> dates) {
