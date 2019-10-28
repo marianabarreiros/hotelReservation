@@ -6,32 +6,23 @@ import java.time.format.DateTimeParseException;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-//import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-import static javax.sql.rowset.spi.SyncFactory.getLogger;
 
 public class ValidDates {
-    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMMuuuu");
-    private  static ValidDates datesValidationInstance;
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMMuuuu");
+    private final AtomicBoolean isValid = new AtomicBoolean(Boolean.TRUE);
     private Set<LocalDate> validatedDates;
+
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    private AtomicBoolean isValid = new AtomicBoolean(Boolean.TRUE);;
 
-    private ValidDates() {
+    public ValidDates() {
     }
 
-    public static ValidDates getInstance() {
-        if (datesValidationInstance == null) {
-            datesValidationInstance = new ValidDates();
-        }
-        return datesValidationInstance;
-    }
-
-    public synchronized Set<LocalDate> returnsListOfValidatedDates(List<String> dates) {
+    public Set<LocalDate> returnsListOfValidatedDates(List<String> dates) {
         validatedDates = new LinkedHashSet<>();
         Set<String> dates1 = getDatesWithoutDaysOfWeek(dates);
         dates1.forEach(date -> {
@@ -39,7 +30,7 @@ public class ValidDates {
                 LocalDate localDate = LocalDate.parse(date, formatter);
                 validatedDates.add(localDate);
             } catch (DateTimeParseException e) {
-                LOGGER.log(Level.SEVERE, "erro", e.getParsedString());
+                LOGGER.log(Level.SEVERE, "Somenthing wrong with you entry date. Please fix it!", e.getMessage());
             }
         });
         return isValid.get() ? validatedDates : null;
@@ -47,7 +38,7 @@ public class ValidDates {
 
     private Set<String> getDatesWithoutDaysOfWeek(List<String> dates) {
         return dates.stream()
-                .map(date -> date.substring(0, 9).toLowerCase())
+                .map(date -> date.substring(0, 9))
                 .collect(Collectors.toSet());
     }
 }

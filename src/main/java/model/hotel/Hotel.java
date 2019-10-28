@@ -34,9 +34,7 @@ public class Hotel implements DynamicPriceAddition{
 
     private boolean thereIsClient(PriceTable priceTable) {
         return this.priceTable.stream()
-                .filter(p -> p.getClientType().equalsIgnoreCase(priceTable.getClientType()))
-                .findAny()
-                .isPresent();
+                .anyMatch(p -> p.getClientType().equalsIgnoreCase(priceTable.getClientType()));
     }
 
     @Override

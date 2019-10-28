@@ -4,7 +4,7 @@ import model.client.Client;
 import model.client.Regular;
 import model.client.Rewards;
 
-public class SimpleClientFactory {
+class SimpleClientFactory {
     private Client clientType;
 
     public Client getClientType() {
