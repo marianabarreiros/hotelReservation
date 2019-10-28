@@ -34,18 +34,7 @@ public class ValidDates {
                 LOGGER.log(Level.SEVERE, "erro", e.getParsedString());
             }
         });
-//        return isValid.compareAndSet(false, true);
         return isValid.get() ? validatedDates : null;
-
-//        for(int i =0; i <= dates1.size(); i++){
-//            try {
-//                LocalDate localDate = LocalDate.parse(dates1, formatter);
-//                validatedDates.add(localDate);
-//            } catch (DateTimeParseException e) {
-//                LOGGER.log(Level.SEVERE, "erro", e.getParsedString());
-//            }
-//        }
-//        return validatedDates;
     }
 
     private Set<String> getDatesWithoutDaysOfWeek(List<String> dates) {
