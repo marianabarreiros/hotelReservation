@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controller.file.ValidateFileLinesTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-28T22:46:45" hostname="mariana-Latitude-3490" time="0.004">
+  <properties/>
+  <testcase name="validFiles" classname="controller.file.ValidateFileLinesTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 28, 2019 7:46:45 PM controller.file.FileReading readFile
+INFO: Initializing the read file.
+Oct 28, 2019 7:46:45 PM controller.file.FileReading readFile
+INFO: Initializing the read file.
+Oct 28, 2019 7:46:45 PM controller.file.ValidateFileLines validateFileLinesAcrossByPattern
+INFO: The file was processing successfully.
+]]></system-err>
+</testsuite>

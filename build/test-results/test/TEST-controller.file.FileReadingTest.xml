@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controller.file.FileReadingTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-10-28T22:46:45" hostname="mariana-Latitude-3490" time="0.003">
+  <properties/>
+  <testcase name="whenFileNotFound_thenExpectedNullPointer" classname="controller.file.FileReadingTest" time="0.002"/>
+  <testcase name="whenFileWasFound_thenExpectedYourCountLines" classname="controller.file.FileReadingTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

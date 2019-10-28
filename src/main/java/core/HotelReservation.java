@@ -15,15 +15,20 @@ class HotelReservation {
 
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    public static void main (String[] args){
+    public static void main (String[] args) {
         List<Hotel> listaHoteis = loadHotels();
         FileReading fileReading = new FileReading();
         ValidateFileLines validateFileLines = new ValidateFileLines(fileReading.readFile());
 
-        for(String fileLine : validateFileLines.validateFileLinesAcrossByPattern()){
+        for (String fileLine : validateFileLines.validateFileLinesAcrossByPattern()) {
             FindCheapestHotel findCheapestHotel = new FindCheapestHotel(fileLine, listaHoteis);
             LOGGER.log(Level.INFO, "The hotel more cheap  is:");
-            System.out.println(findCheapestHotel.findCheapestHotel());
+            try {
+                System.out.println(findCheapestHotel.findCheapestHotel());
+            } catch (Exception e) {
+                LOGGER.log(Level.SEVERE, "Maybe some client not exist. Verify your entry file!!");
+                throw new NullPointerException();
+            }
         }
     }
 

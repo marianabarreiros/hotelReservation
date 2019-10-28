@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controller.client.GetClientTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-10-28T22:46:45" hostname="mariana-Latitude-3490" time="0.001">
+  <properties/>
+  <testcase name="whenClientDontExist_thenReturnFalse" classname="controller.client.GetClientTest" time="0.001"/>
+  <testcase name="migthReturnClientsName" classname="controller.client.GetClientTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

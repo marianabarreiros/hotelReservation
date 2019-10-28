@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controller.date.ValidDatesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-10-28T22:46:45" hostname="mariana-Latitude-3490" time="0.002">
+  <properties/>
+  <testcase name="whenReceiveAListWithThreeParameters_thenReturnSizeThree" classname="controller.date.ValidDatesTest" time="0.0"/>
+  <testcase name="whenReceiveAWrongFormat_thenReturnListSizelessOne" classname="controller.date.ValidDatesTest" time="0.001"/>
+  <testcase name="whenReceiveAListOfString_thenReturnAListOfSet" classname="controller.date.ValidDatesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 28, 2019 7:46:45 PM controller.date.ValidDates lambda$returnsListOfValidatedDates$0
+SEVERE: Somenthing wrong with you entry date. Please fix it!
+]]></system-err>
+</testsuite>

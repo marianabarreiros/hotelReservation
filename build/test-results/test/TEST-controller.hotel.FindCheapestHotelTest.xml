@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controller.hotel.FindCheapestHotelTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-10-28T22:46:45" hostname="mariana-Latitude-3490" time="0.06">
+  <properties/>
+  <testcase name="mightReturnBridgewoodLikeTheHotelMoreCheap" classname="controller.hotel.FindCheapestHotelTest" time="0.031"/>
+  <testcase name="mightReturnLakewoodLikeTheHotelMoreCheap" classname="controller.hotel.FindCheapestHotelTest" time="0.027"/>
+  <testcase name="mightReturnRidgewoodLikeTheHotelMoreCheap" classname="controller.hotel.FindCheapestHotelTest" time="0.0"/>
+  <testcase name="test" classname="controller.hotel.FindCheapestHotelTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oct 28, 2019 7:46:45 PM controller.date.ValidDates lambda$returnsListOfValidatedDates$0
+SEVERE: Somenthing wrong with you entry date. Please fix it!
+Oct 28, 2019 7:46:45 PM controller.date.ValidDates lambda$returnsListOfValidatedDates$0
+SEVERE: Somenthing wrong with you entry date. Please fix it!
+Oct 28, 2019 7:46:45 PM controller.date.ValidDates lambda$returnsListOfValidatedDates$0
+SEVERE: Somenthing wrong with you entry date. Please fix it!
+]]></system-err>
+</testsuite>
