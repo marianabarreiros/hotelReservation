@@ -17,7 +17,6 @@ public class ValidateFileLinesTest {
         validateFileLines = new ValidateFileLines(fileReading.readFile());
     }
 
-    @Ignore
     @Test
     public void validFiles(){
         assertEquals(3, validateFileLines.validateFileLinesAcrossByPattern().size());
